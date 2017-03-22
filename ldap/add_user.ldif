@@ -1,0 +1,30 @@
+#################################
+###
+###
+### Alta de usuarios
+###
+######################
+#  Usuarios zipi de la unidad organizativa usuarios
+dn: uid=zipi,ou=usuarios,dc=serverus,dc=local
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: zipi
+sn: zapatilla
+cn: zipi
+mail: zipi@serverus.local
+userPassword: paso
+
+# Usuarios zape de la unidad organizativa usuarios
+dn: uid=zape,ou=usuarios,dc=serverus,dc=local
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: zape
+sn: zapatilla
+cn: zape
+mail: zape@serverus.local
+userPassword: paso
+
