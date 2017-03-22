@@ -1,0 +1,20 @@
+;
+; BIND data file for serverus.local
+;
+$TTL	604800
+@	IN	SOA	DAW-USED.serverus.local.  root.serverus.local. (
+			      2		; Serial
+			 604800		; 7 dias Refresh
+			  86400		; 24 horas Retry
+			2419200		; 28 dias Expire
+			 3600 	)	; Negative Cache TTL
+;
+@		IN	NS	DAW-USED.serverus.local.
+@		IN	MX	10 mail.serverus.local.
+@		IN	A	192.168.0.119
+DAW-USED	IN	A 	192.168.0.119
+ldap		IN	A	192.168.0.116
+mail		IN	A	192.168.0.119
+ftp		IN	CNAME	DAW-USED.serverus.local.
+www		IN	CNAME	DAW-USED.serverus.local.
+
