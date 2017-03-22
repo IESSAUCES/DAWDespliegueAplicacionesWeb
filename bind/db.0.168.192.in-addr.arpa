@@ -1,0 +1,16 @@
+;
+; BIND data file for 0.168.192.in-addr.arpa
+;
+$TTL	604800
+@	IN	SOA	DAW-USED.serverus.local.  root.serverus.local. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@		IN	NS	DAW-USED.serverus.local.
+119		IN	PTR 	DAW-USED.serverus.local.
+119             IN      PTR     serverus.local.
+119		IN	PTR	mail.serverus.local.
+116		IN	PTR	ldap.serverus.local.
