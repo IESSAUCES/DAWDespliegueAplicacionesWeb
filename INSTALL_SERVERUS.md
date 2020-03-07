@@ -14,15 +14,8 @@
 - [ ] Instalación apache
 - [ ] Comprobación de funcionamiento
 
-## 4. SERVIDOR DNS
-- [ ] Instalación bind9
-- [ ] Configuración de la zona directa "xxxx.xxx"
-- [ ] Configuración de la zona inversa 
-- [ ] Reiniciar el servicio
-- [ ] Cambiar la configuración de red (/etc/network/interfaces)
-- [ ] Comprobar el funcionamiento.
 
-## 5. SERVIDOR DE APLICACIONES PHP con MySQL
+## 4. SERVIDOR DE APLICACIONES PHP con MySQL
 
 ### MySQL
 
@@ -48,8 +41,7 @@ sudo apt-get install nombredelmodulo
 - [ ] Instalación phpmyadmin
 - [ ] Comprobación http://IP/phpmyadmin
   
-  
-## 6. DAR DE ALTA USUARIOS DEL SISTEMA
+## 5. DAR DE ALTA USUARIOS DEL SISTEMA
 
 1. Crear grupo sftpusers
 ```bash
@@ -61,9 +53,16 @@ sudo  ./crearUsuario.sh
 ```
 3. SFTP: Enjaular o aislar usuarios
 
-## 7. MYSQL: DAR DE ALTA USUARIOS
+## 6. MYSQL: DAR DE ALTA USUARIOS
 
 
+## 7. SERVIDOR DNS
+- [ ] Instalación bind9
+- [ ] Configuración de la zona directa "xxxx.xxx"
+- [ ] Configuración de la zona inversa 
+- [ ] Reiniciar el servicio
+- [ ] Cambiar la configuración de red (/etc/network/interfaces)
+- [ ] Comprobar el funcionamiento.
 
     
 
