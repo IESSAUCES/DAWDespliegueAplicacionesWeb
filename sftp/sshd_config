@@ -95,9 +95,9 @@ Subsystem sftp internal-sftp
 UsePAM yes
 
 
-Match Group sftpusers
+Match Group ftpusers
 ChrootDirectory %h
-ForceCommand internal-sftp
-AllowTcpForwarding no
+ForceCommand internal-sftp -u 2
+AllowTcpForwarding yes
 PermitTunnel no
 X11Forwarding no
