@@ -1,0 +1,24 @@
+;BIND data for cristina.local
+;
+$TTL 604800
+@ IN SOA cns.cristina.local. root.localhost. (
+		1	; Serial
+		604800		; Refresh
+		86400		; Retry
+		2419200		; Expire
+		3600 )		; Negative cache TTL
+;
+@		IN NS cns.cristina.local.
+; Registros Host
+@		IN A	192.168.1.215
+cns		IN A	192.168.1.215
+
+;Registros Alias
+daw201		IN CNAME	cns.cristina.local.
+daw202		IN CNAME	cns.cristina.local.
+daw203		IN CNAME	cns.cristina.local.
+daw204		IN CNAME	cns.cristina.local.
+www.daw201	IN CNAME	cns.cristina.local.
+www.daw202	IN CNAME	cns.cristina.local.
+www.daw203	IN CNAME	cns.cristina.local.
+www.daw204	IN CNAME	cns.cristina.local.
