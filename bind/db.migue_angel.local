@@ -1,0 +1,54 @@
+;
+; BIND data for miguel_angel.local
+;
+$TTL	604800
+@	IN SOA	maagused.miguel_angel.local. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 3600 )		; Negative Cache TTL
+;
+@	IN	NS	maagused.miguel_angel.local.
+; Registros Host
+@	IN	A	192.168.3.210
+maagused	IN	A	192.168.3.210
+
+; Registros Alias
+
+daw201	IN	CNAME	maagused.miguel_angel.local.
+daw202	IN	CNAME	maagused.miguel_angel.local.
+daw203	IN	CNAME	maagused.miguel_angel.local.
+daw204	IN	CNAME	maagused.miguel_angel.local.
+daw205	IN	CNAME	maagused.miguel_angel.local.
+daw206	IN	CNAME	maagused.miguel_angel.local.
+daw207	IN	CNAME	maagused.miguel_angel.local.
+daw208	IN	CNAME	maagused.miguel_angel.local.
+daw209	IN	CNAME	maagused.miguel_angel.local.
+daw210	IN	CNAME	maagused.miguel_angel.local.
+daw211 	IN	CNAME	maagused.miguel_angel.local.
+daw212	IN	CNAME	maagused.miguel_angel.local.
+daw213	IN	CNAME	maagused.miguel_angel.local.
+daw214	IN	CNAME	maagused.miguel_angel.local.
+daw215	IN	CNAME	maagused.miguel_angel.local.
+daw216	IN	CNAME	maagused.miguel_angel.local.
+daw217	IN	CNAME	maagused.miguel_angel.local.
+
+
+www.daw201	IN	CNAME	maagused.miguel_angel.local.
+www.daw202	IN	CNAME	maagused.miguel_angel.local.
+www.daw203	IN	CNAME	maagused.miguel_angel.local.
+www.daw204	IN	CNAME	maagused.miguel_angel.local.
+www.daw205	IN	CNAME	maagused.miguel_angel.local.
+www.daw206	IN	CNAME	maagused.miguel_angel.local.
+www.daw207	IN	CNAME	maagused.miguel_angel.local.
+www.daw208	IN	CNAME	maagused.miguel_angel.local.
+www.daw209	IN	CNAME	maagused.miguel_angel.local.
+www.daw210	IN	CNAME	maagused.miguel_angel.local.
+www.daw211 	IN	CNAME	maagused.miguel_angel.local.
+www.daw212	IN	CNAME	maagused.miguel_angel.local.
+www.daw213	IN	CNAME	maagused.miguel_angel.local.
+www.daw214	IN	CNAME	maagused.miguel_angel.local.
+www.daw215	IN	CNAME	maagused.miguel_angel.local.
+www.daw216	IN	CNAME	maagused.miguel_angel.local.
+www.daw217	IN	CNAME	maagused.miguel_angel.local.
