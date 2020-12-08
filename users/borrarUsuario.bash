@@ -8,8 +8,8 @@ fi
     #DIR_APACHE es el directorio donde estaran todos los home de los usuarios
     #GRUPO_SFTP sera el grupo deberemos tener creado
 DIR_APACHE="/var/www/"
-GRUPO_SFTP="sftpusers"
-DOMINIO="sauces.local"
+GRUPO_SFTP="ftpusers"
+DOMINIO="javier.local"
 SUFIJO_USUARIO="DAW"
 
 
