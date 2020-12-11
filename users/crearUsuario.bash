@@ -93,27 +93,25 @@ while [ $CURSO -lt 3 ]; do
 	chgrp  -R "www-data" "$DIR_APACHE$USUARIO/public_html"
 	chown -R "$USUARIO"  "$DIR_APACHE$USUARIO/public_html/index.html"
 
-	done
-
-done
-# chgrp "www-data" "$DIR_APACHE$USUARIO/public_html/index.html"
-# chown "$USUARIO"  "$DIR_APACHE$USUARIO/public_html/index.html"
 
 #Vamos con apache
 #Creamos el sitio 
-# printf  "%s\n"\
-#        "<VirtualHost *:80>"\
-#        "       ServerName $USUARIO.$DOMINIO"\
-#        "       ServerAdmin webmaster@localhost"\
-#        "       DocumentRoot $DIR_APACHE$USUARIO/www/"\
-#        "       DirectoryIndex index.htm index.html index.php index.jsp"\
-#        "</VirtualHost>"\
-# 	>/etc/apache2/sites-available/"$USUARIO".conf
+ printf  "%s\n"\
+        "<VirtualHost *:80>"\
+        "       ServerName $USUARIO.$DOMINIO"\
+        "       ServerAdmin webmaster@localhost"\
+        "       DocumentRoot $DIR_APACHE$USUARIO/public_html/"\
+	"	ServerAlias www.$USUARIO.$DOMINIO"\
+        "       DirectoryIndex index.htm index.html index.php index.jsp"\
+        "</VirtualHost>"\
+ 	>/etc/apache2/sites-available/"$USUARIO".conf
 
 #Habilitamos el sitio
-# a2ensite "$USUARIO.conf"
-
+ a2ensite "$USUARIO.conf"
+ echo "Sitio creado para el dominio http://$USUARIO.$DOMINIO"
+	done
+done
 #Reiniciamos apache
-# /etc/init.d/apache2 restart
+ /etc/init.d/apache2 restart
 
-# echo "Sitio creado para el dominio http://$USUARIO.$DOMINIO"
+#echo "Sitio creado para el dominio http://$USUARIO.$DOMINIO"
