@@ -48,7 +48,7 @@ while [ $CURSO -lt 3 ]; do
 	VALOR_FINAL=117
 	else
 	VALOR_INICIAL=201
-	VALOR_FINAL=217
+	VALOR_FINAL=218
 	fi
 	let CURSO+=1
 	echo "VALOR INICIAL $VALOR_INICIAL"
@@ -93,27 +93,25 @@ while [ $CURSO -lt 3 ]; do
 	chgrp  -R "www-data" "$DIR_APACHE$USUARIO/public_html"
 	chown -R "$USUARIO"  "$DIR_APACHE$USUARIO/public_html/index.html"
 
-	done
-
-done
-# chgrp "www-data" "$DIR_APACHE$USUARIO/public_html/index.html"
-# chown "$USUARIO"  "$DIR_APACHE$USUARIO/public_html/index.html"
-
 #Vamos con apache
 #Creamos el sitio 
-# printf  "%s\n"\
-#        "<VirtualHost *:80>"\
-#        "       ServerName $USUARIO.$DOMINIO"\
-#        "       ServerAdmin webmaster@localhost"\
-#        "       DocumentRoot $DIR_APACHE$USUARIO/www/"\
-#        "       DirectoryIndex index.htm index.html index.php index.jsp"\
-#        "</VirtualHost>"\
-# 	>/etc/apache2/sites-available/"$USUARIO".conf
+	printf  "%s\n"\
+        "<VirtualHost *:80>"\
+        "       ServerName $USUARIO.$DOMINIO"\
+        "       ServerAdmin webmaster@localhost"\
+	"	ServerAlias www.$USUARIO.$DOMINIO"\
+        "       DocumentRoot $DIR_APACHE$USUARIO/public_html/"\
+        "       DirectoryIndex index.htm index.html index.php index.jsp"\
+        "</VirtualHost>"\
+ 	>/etc/apache2/sites-available/"$USUARIO".conf
 
-#Habilitamos el sitio
-# a2ensite "$USUARIO.conf"
+	#Habilitamos el sitio
+	 a2ensite "$USUARIO.conf"
+	echo "Sitio creado para el dominio http://$USUARIO.$DOMINIO"
+
+        done
+
+done
 
 #Reiniciamos apache
-# /etc/init.d/apache2 restart
-
-# echo "Sitio creado para el dominio http://$USUARIO.$DOMINIO"
+/etc/init.d/apache2 restart

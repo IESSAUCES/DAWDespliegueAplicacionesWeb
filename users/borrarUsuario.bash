@@ -34,7 +34,7 @@ while [ $CURSO -lt 3 ]; do
 	VALOR_FINAL=117
 	else
 	VALOR_INICIAL=201
-	VALOR_FINAL=217
+	VALOR_FINAL=218
 	fi
 	let CURSO+=1
 	echo "VALOR INICIAL $VALOR_INICIAL"
@@ -63,16 +63,12 @@ while [ $CURSO -lt 3 ]; do
 			fi
 
 #Deshabilitamos el sitio en apache
-#a2dissite "$USUARIO.conf"
+		a2dissite "$USUARIO.conf"
 
 #Eliminamos la configuracion del sitio 
-#rm /etc/apache2/sites-available/"$USUARIO".conf
+		rm /etc/apache2/sites-available/"$USUARIO".conf
 
 
-	echo "Usuario $USUARIO eliminado correctamente!"
+		echo "Usuario $USUARIO eliminado correctamente!"
+	done
 done
-done
-
-
-
-
