@@ -11,6 +11,14 @@ DIR_APACHE="/var/www/"
 GRUPO_SFTP="ftpusers"
 DOMINIO="luis.local"
 SUFIJO_USUARIO="DAW"
+DIR_DNS="/etc/bind/db.luis.local"
+HOST="lpfused.${DOMINIO}."
+
+#Comprueba si el fichero existe, en caso de no existir muestra un mensaje de error y sale con el codigo 1
+if [[ ! -f $DIR_DNS ]]; then
+        echo -e "\e[31mEl fichero $DIR_DNS no existe\e[0m"
+        exit 1
+fi
 
 
 #Comprobamos que el directorio de usuarios existe
@@ -63,16 +71,26 @@ while [ $CURSO -lt 3 ]; do
 			fi
 
 #Deshabilitamos el sitio en apache
-a2dissite "$USUARIO.conf"
+	a2dissite "$USUARIO.conf"
 
 #Eliminamos la configuracion del sitio 
-rm /etc/apache2/sites-available/"$USUARIO".conf
+	rm /etc/apache2/sites-available/"$USUARIO".conf
 
 
 	echo "Usuario $USUARIO eliminado correctamente!"
-done
-done
+#Eliminar registros del DNS
+	sed -i -E "/^(www.)?$USUARIO/{n;d}" $DIR_DNS > /dev/null 2>&1
+	sed -i -E "/^(www.)?$USUARIO/d" $DIR_DNS > /dev/null 2>&1
 
+	if [[ $? -eq 0 ]]; then
+	       echo -e "\e[34mEl registro del usuario $USUARIO se ha borrado del DNS\e[0m";
+	else
+	       echo -e "\e[31mError al borrar el registro DNS de ${USUARIO}\e[0m"
+	fi
+#Borra la ultima line en blanco
+	 sed -i '${/^$/d}' $DIR_DNS > /dev/null 2>&1
+done
+done
 /etc/init.d/apache2 restart
 
 

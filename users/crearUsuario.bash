@@ -9,12 +9,20 @@ fi
 # Creamos las variables
 # DIR_APACHE es el directorio donde estaran todos los home de los usuarios
 # GRUPO_SFTP sera el grupo deberemos tener creado
+#DIR_DNS es el directorio donde se encuentra el archivo de configuracion de bind9
 
 DIR_APACHE="/var/www/"
 GRUPO_SFTP="ftpusers"
 DOMINIO="luis.local"
 SUFIJO_USUARIO="DAW"
+DIR_DNS="/etc/bind/db.luis.local"
+HOST="lpfused.${DOMINIO}."
 
+#Comprueba si el fichero existe, en caso de no existir muestra un mensaje de error y sale con el codigo 1 
+if [[ ! -f $DIR_DNS ]]; then
+	echo -e "\e[31mEl fichero $DIR_DNS no existe, créalo antes de ejecutar el script\e[0m"
+	exit 1
+fi
 
 # Comprobamos que el grupo de usuarios existe
 # Con esta linea mostramos el fichero /etc/group si no muestra ninguna linea el codigo de error es 1
@@ -96,7 +104,7 @@ while [ $CURSO -lt 3 ]; do
 
 #Vamos con apache
 #Creamos el sitio 
- printf  "%s\n"\
+	printf  "%s\n"\
         "<VirtualHost *:80>"\
         "       ServerName $USUARIO.$DOMINIO"\
         "       ServerAdmin webmaster@localhost"\
@@ -107,7 +115,25 @@ while [ $CURSO -lt 3 ]; do
  	>/etc/apache2/sites-available/"$USUARIO".conf
 
 #Habilitamos el sitio
- a2ensite "$USUARIO.conf"
+	 a2ensite "$USUARIO.conf"
+
+#Insertar en el DNS, no se comprueba que los registros esten insertados. Comprobar antes de ejecutar, puede crear duplicados en caso contrario
+#Insertamos con sed los registros al final del archivo, se redirigen los mensajes a null
+#En caso de error se redirige el stderr a stdout 
+	sed -i "$ a $USUARIO IN CNAME $HOST" $DIR_DNS > /dev/null 2>&1
+#En de que el ultimo comando se halla ejecutado correctamente se mostrara un mensaje indicandolo, en caso contrario se mostrará un mensaje de error
+	if [[ $? -eq 0 ]]; then
+	       echo -e "\e[34mEl registro $USUARIO se ha insertado correctamente\e[0m";
+	else
+	       echo -e "\e[32mError al insertar el registro DNS de $USUARIO\e[0m"
+	fi
+#Inserta el mismo registro de antes pero precedido de www
+	sed -i "$ a www.$USUARIO IN CNAME $HOST \n" $DIR_DNS > /dev/null 2>&1
+	if [[ $? -eq 0 ]]; then
+	       echo -e "\e[34mEl registro www.${USUARIO} se ha insertado correctamente\e[0m";
+	else
+	       echo -e "\e[31mError al insertar el registro $DNS de www.${USUARIO}\e[0m"
+	fi
 
 	done
 
