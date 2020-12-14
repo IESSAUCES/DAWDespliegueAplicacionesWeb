@@ -94,7 +94,7 @@ Subsystem sftp internal-sftp
 # and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
 
-AllowGroups ftpusers miadmin
+AllowGroups ftpusers
 
 Match Group ftpusers
 ChrootDirectory %h
