@@ -1,0 +1,21 @@
+;
+; BIND data for jnl.local
+;
+$TTL	604800
+@	IN SOA	jnlexus.jnl.local. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 3600 )		; Negative Cache TTL
+;
+@	IN	NS	jnlexus.jnl.local.
+; Registros Host
+@	IN	A	192.168.3.117
+jnlexus	IN	A	192.168.3.117
+jnlexus.jnl.local	A	192.168.3.117
+
+; Registros Alias
+
+sitio1	IN	CNAME	jnlexus.jnl.local.
+sitio2	IN	CNAME	jnlexus.jnl.local.

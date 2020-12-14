@@ -5,10 +5,10 @@
 // Consider adding the 1918 zones here, if they are not used in your
 // organization
 //include "/etc/bind/zones.rfc1918";
-zone "javier.local"{
+zone "jnl.local"{
 
 	type master;
 
-	file "/etc/bind/db.javier.local";
+	file "/etc/bind/db.jnl.local";
 };
 
