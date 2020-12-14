@@ -1,15 +1,12 @@
 //
 // Do any local configuration here
 //
+	zone "cns.local" {
+		type master;
+		file "/etc/bind/db.cns.local";
+	};
 
 // Consider adding the 1918 zones here, if they are not used in your
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-	zone "cristina.local" {
-		
-		type master;
-		
-		file "/etc/bind/db.cristina.local";
-
-	};

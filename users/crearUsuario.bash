@@ -12,8 +12,8 @@ fi
 
 DIR_APACHE="/var/www/"
 GRUPO_SFTP="ftpusers"
-DOMINIO="cristina.local"
-SUFIJO_USUARIO="DAW"
+DOMINIO="cns.local"
+SUFIJO_USUARIO="sitio"
 
 
 # Comprobamos que el grupo de usuarios existe
@@ -44,11 +44,11 @@ echo "CURSO $CURSO"
 while [ $CURSO -lt 3 ]; do
 	echo "CURSO: $CURSO "
 	if [ $CURSO -eq 1 ]; then
-	VALOR_INICIAL=101
-	VALOR_FINAL=117
+	VALOR_INICIAL=1
+	VALOR_FINAL=2
 	else
-	VALOR_INICIAL=201
-	VALOR_FINAL=217
+	VALOR_INICIAL=1
+	VALOR_FINAL=2
 	fi
 	let CURSO+=1
 	echo "VALOR INICIAL $VALOR_INICIAL"
@@ -87,7 +87,7 @@ while [ $CURSO -lt 3 ]; do
 	touch  "$DIR_APACHE$USUARIO/public_html"
 
 	printf "%s\n"\
-	"En construccion"   >>"/var/www/$USUARIO/public_html/index.html"
+	"Bienvenido al $USUARIO"   >>"/var/www/$USUARIO/public_html/index.html"
 
 
 	chgrp  -R "www-data" "$DIR_APACHE$USUARIO/public_html"
