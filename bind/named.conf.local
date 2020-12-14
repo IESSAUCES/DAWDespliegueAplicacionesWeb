@@ -6,7 +6,7 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "luis.local" {
+zone "lpf.local" {
 	type master;
-	file "/etc/bind/db.luis.local";		
+	file "/etc/bind/db.lpf.local";		
 };
