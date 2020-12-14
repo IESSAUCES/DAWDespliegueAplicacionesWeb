@@ -1,0 +1,25 @@
+;
+; BIND data for maag.local
+;
+$TTL	604800
+@	IN SOA	maagused.maag.local. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 3600 )		; Negative Cache TTL
+;
+@	IN	NS	maagused.maag.local.
+; Registros Host
+@	IN	A	192.168.3.210
+maagused	IN	A	192.168.3.210
+
+; Registros Alias
+
+sitio1	IN	CNAME	maagused.maag.local.
+sitio2	IN	CNAME	maagused.maag.local.
+
+
+
+www.sitio1	IN	CNAME	maagused.miguel.local.
+www.sitio2	IN	CNAME	maagused.miguel.local.
