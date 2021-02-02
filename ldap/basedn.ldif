@@ -1,0 +1,7 @@
+dn: ou=people,dc=amor,dc=local
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=amor,dc=local
+objectClass: organizationalUnit
+ou: groups

@@ -1,0 +1,5 @@
+dn: cn=Skynats technologies,ou=groups,dc=amor,dc=local
+objectClass: posixGroup
+cn: Skynats technologies
+gidNumber: 2000
+memberUid: 

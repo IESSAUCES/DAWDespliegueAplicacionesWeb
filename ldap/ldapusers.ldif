@@ -1,0 +1,23 @@
+dn: uid=Skynats technologies,ou=people,dc=amor,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Skynats technologies
+sn: Wiz
+userPassword: {SSHA}0hSpajyHf+XOHxJuL0IHSNNljT0XuWFW
+loginShell: /bin/bash
+uidNumber: 2000
+gidNumber: 2000
+homeDirectory: /home/Skynats technologies
+
+dn: uid=Maria technologies,ou=people,dc=amor,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Maria technologies
+sn: Maria
+userPassword:  {SSHA}0hSpajyHf+XOHxJuL0IHSNNljT0XuWFW
+loginShell: /bin/bash
+uidNumber: 2001
+gidNumber: 2000
+homeDirectory: /home/Maria technologies
