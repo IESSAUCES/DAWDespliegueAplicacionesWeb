@@ -1,0 +1,26 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	OB-USED.outmane.local. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	OB-USED.outmane.local.
+@	IN	A	192.168.3.102
+OB-USED IN      A       192.168.3.102
+
+; Registros Alias
+
+daw201    IN      CNAME    OB-USED.outmane.local.
+daw202    IN      CNAME    OB-USED.outmane.local.
+daw203    IN      CNAME    OB-USED.outmane.local.
+
+www.daw201 IN     CNAME    OB-USED.outmane.local.
+www.daw202 IN     CNAME    OB-USED.outmane.local.
+www.daw203 IN     CNAME    OB-USED.outmane.local.
+
+login      IN     CNAME    OB-USED.outmane.local.
