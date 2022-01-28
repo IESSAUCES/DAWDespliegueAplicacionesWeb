@@ -1,0 +1,30 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	RGZ-USED.Rodrigo.local. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			3600  )	; Negative Cache TTL
+;
+@	IN	NS	RGZ-USED.Rodrigo.local.
+;Registros Host
+
+@		IN	A	192.168.3.103
+RGZ-USED	IN	A	192.168.3.103
+
+;Registros Alias
+daw201 IN CNAME RGZ-USED.Rodrigo.local.
+daw202 IN CNAME RGZ-USED.Rodrigo.local.
+daw203 IN CNAME RGZ-USED.Rodrigo.local.
+daw204 IN CNAME RGZ-USED.Rodrigo.local.
+daw205 IN CNAME RGZ-USED.Rodrigo.local.
+login.Rodrigo.local. IN CNAME RGZ-USED.Rodrigo.local.
+www.daw201 IN CNAME RGZ-USED.Rodrigo.local.
+www.daw202 IN CNAME RGZ-USED.Rodrigo.local.
+www.daw203 IN CNAME RGZ-USED.Rodrigo.local.
+www.daw204 IN CNAME RGZ-USED.Rodrigo.local.
+www.daw205 IN CNAME RGZ-USED.Rodrigo.local.
+www.login.Rodrigo.local. IN CNAME RGZ-USED.Rodrigo.local.
