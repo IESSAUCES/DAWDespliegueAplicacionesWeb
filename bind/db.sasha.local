@@ -2,17 +2,18 @@
 ; BIND data for sasha.local
 ;
 $TTL	604800
-@	IN	SOA	img-used.sasha.local. root.localhost. (
+@	IN	SOA	img-ldap.sasha.local. root.localhost. (
 			      1		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			   3600 )	; Negative Cache TTL
 ;
-@		IN	NS	img-used.sasha.local.
+@		IN	NS	img-ldap.sasha.local.
 ; Registros host
-@		IN	A	192.168.3.104
+@		IN	A	192.168.3.204
 img-used	IN	A	192.168.3.104
+img-ldap	IN	A	192.168.3.204
 
 ; Registros Alias
 daw201		IN CNAME img-used.sasha.local.
