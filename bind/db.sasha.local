@@ -1,0 +1,25 @@
+;
+; BIND data for sasha.local
+;
+$TTL	604800
+@	IN	SOA	img-used.sasha.local. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			   3600 )	; Negative Cache TTL
+;
+@		IN	NS	img-used.sasha.local.
+; Registros host
+@		IN	A	192.168.3.104
+img-used	IN	A	192.168.3.104
+
+; Registros Alias
+daw201		IN CNAME img-used.sasha.local.
+daw202          IN CNAME img-used.sasha.local.
+daw203          IN CNAME img-used.sasha.local.
+login		IN CNAME img-used.sasha.local.
+www.daw201      IN CNAME img-used.sasha.local.
+www.daw202      IN CNAME img-used.sasha.local.
+www.daw203      IN CNAME img-used.sasha.local.
+www.login	IN CNAME img-used.sasha.local.
