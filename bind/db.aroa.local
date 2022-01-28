@@ -2,17 +2,18 @@
 ; BIND data file for local loopback interface
 ;
 $TTL	604800
-@	IN	SOA	ago-used.aroa.local. root.localhost. (
+@	IN	SOA	AGO-ldap.aroa.local. root.localhost. (
 			      1		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )       ; Negative Cache TTL
 ;
-@	IN	NS	ago-used.aroa.local.
+@	IN	NS	AGO-ldap.aroa.local.
 ; Registros Host
-@	        IN	A	192.168.3.108
+@	        IN	A	192.168.3.208
 ago-used        IN      A       192.168.3.108
+AGO-ldap        IN      A       192.168.3.208
 
 ; Registros Alias
 daw201          IN CNAME   ago-used.aroa.local.
