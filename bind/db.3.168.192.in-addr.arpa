@@ -1,16 +1,17 @@
 ;
-; BIND data file for 0.168.192.in-addr.arpa
+; BIND data for oscar.local
 ;
 $TTL	604800
-@	IN	SOA	olpused.oscar.local.  root.oscar.local. (
-			      2		; Serial
+@	IN	SOA	olpused.oscar.local. root.localhost. (
+			      1		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
-			 604800 )	; Negative Cache TTL
+			   3600 )	; Negative Cache TTL
 ;
 @		IN	NS	olpused.oscar.local.
-119		IN	PTR 	olpused.oscar.local.
-119             IN      PTR     oscar.local.
-119		IN	PTR	mail.oscar.local.
-116		IN	PTR	ldap.oscar.local.
+
+; Registros pointer
+214		IN	PTR	oscar.local.
+114		IN	PTR	olpused.oscar.local.
+214		IN	PTR	olpldap.oscar.local.

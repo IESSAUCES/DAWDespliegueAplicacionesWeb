@@ -1,17 +1,18 @@
 ;BIND data for tunombre.local
 ;          
 $TTL 604800
-@ IN SOA olpused.oscar.local. root.localhost. (
+@ IN SOA olpldap.oscar.local. root.localhost. (
                 1    ; Serial
                 604800     ; Refresh
                 86400      ; Retry
                 2419200    ; Expire
                 3600 )     ; Negative cache TTL
 ;
-@               IN NS olpused.oscar.local.
+@               IN NS olpldap.oscar.local.
 ; Registros Host
-@               IN A   192.168.3.114
+@               IN A   192.168.3.214
 olpused         IN A   192.168.3.114
+olpldap		IN A   192.168.3.214
 
 ; Registros Alias
 daw201          IN CNAME   olpused.oscar.local.
