@@ -2,16 +2,17 @@
 ; BIND data file for local loopback interface
 ;
 $TTL	604800
-@	IN	SOA	DPL-USED.david.local. root.localhost. (
+@	IN	SOA	DPL-LDAP.david.local. root.localhost. (
 			      1		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-@	IN	NS	DPL-USED.david.local.
-@	IN	A	192.168.3.105
+@	IN	NS	DPL-LDAP.david.local.
+@	IN	A	192.168.3.205
 DPL-USED	IN	A	192.168.3.105
+DPL-LDAP	IN	A	192.168.3.205
 
 ; Registros Alias
 
