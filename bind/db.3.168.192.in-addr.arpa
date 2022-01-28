@@ -1,0 +1,16 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ago-used.aroa.local. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )       ; Negative Cache TTL
+;
+@	IN	NS	ago-used.aroa.local.
+
+;Registros pointer
+108            IN       PTR     aroa.local.
+108		IN	PTR	ago-used.aroa.local.

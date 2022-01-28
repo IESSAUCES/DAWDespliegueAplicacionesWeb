@@ -1,0 +1,26 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ago-used.aroa.local. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )       ; Negative Cache TTL
+;
+@	IN	NS	ago-used.aroa.local.
+; Registros Host
+@	        IN	A	192.168.3.108
+ago-used        IN      A       192.168.3.108
+
+; Registros Alias
+daw201          IN CNAME   ago-used.aroa.local.
+daw202          IN CNAME   ago-used.aroa.local.
+daw203          IN CNAME   ago-used.aroa.local.       
+daw204          IN CNAME   ago-used.aroa.local.
+www.daw201      IN CNAME   ago-used.aroa.local.
+www.daw202      IN CNAME   ago-used.aroa.local.
+www.daw203      IN CNAME   ago-used.aroa.local.
+www.daw204      IN CNAME   ago-used.aroa.local.
+

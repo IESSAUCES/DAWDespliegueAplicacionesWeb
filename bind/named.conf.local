@@ -6,12 +6,17 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "serverus.local" {
-	type master;
-	file "/etc/bind/db.serverus.local";
-	};
-zone "0.168.192.in-addr.arpa" {
-	type master;
-	file "/etc/bind/db.0.168.192.in-addr.arpa";
-	};
+zone "aroa.local" {
 
+     type master;
+
+     file "/etc/bind/db.aroa.local";
+
+};
+zone "3.168.192.in-addr.arpa" {
+
+	type master;
+
+	file "/etc/bind/db.3.168.192.in-addr.arpa";
+
+};
