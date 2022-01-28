@@ -1,0 +1,30 @@
+;
+; BIND data file for johanna.local
+;
+$TTL	604800
+@	IN	SOA	jhp-used.johanna.local. root.localhost. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@		IN	NS	jhp-used.johanna.local.
+;Registros host
+@		IN	A	192.168.3.112
+jhp-used	IN	A	192.168.3.112
+
+; Registros Alias
+daw201		IN	CNAME	jhp-used.johanna.local.
+daw202		IN	CNAME	jhp-used.johanna.local.
+daw203		IN	CNAME	jhp-used.johanna.local.
+daw204          IN      CNAME   jhp-used.johanna.local.
+www.daw201	IN      CNAME   jhp-used.johanna.local.
+www.daw202      IN      CNAME   jhp-used.johanna.local.
+www.daw203      IN      CNAME   jhp-used.johanna.local.
+www.daw204      IN      CNAME   jhp-used.johanna.local.
+login.johanna.local	IN	CNAME	jhp-used.johanna.local.
+
+
+
+
