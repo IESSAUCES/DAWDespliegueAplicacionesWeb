@@ -2,18 +2,19 @@
 ; BIND data file for johanna.local
 ;
 $TTL	604800
-@	IN	SOA	jhp-used.johanna.local. root.localhost. (
+@	IN	SOA	jhp-ldap.johanna.local. root.localhost. (
 			      2		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-@		IN	NS	jhp-used.johanna.local.
+@		IN	NS	jhp-ldap.johanna.local.
 
 ;Registros pointer
-112		IN	PTR	johanna.local.
+212		IN	PTR	johanna.local.
 112		IN	PTR	jhp-used.johanna.local.
+212		IN	PTR	jhp-ldap.johanna.local.
 
 
 
