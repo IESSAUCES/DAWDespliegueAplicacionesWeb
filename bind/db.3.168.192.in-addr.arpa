@@ -2,14 +2,15 @@
 ; BIND data file for local loopback interface
 ;
 $TTL	604800
-@	IN	SOA	OB-USED.outmane.local. root.localhost. (
+@	IN	SOA	OB-LDAP.outmane.local. root.localhost. (
 			      1		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-@	IN	NS	OB-USED.outmane.local.
+@	IN	NS	OB-LDAP.outmane.local.
 ;Registros pointer
-102     IN      PTR     outmane.local.
+202     IN      PTR     outmane.local.
 102     IN      PTR     OB-USED.outmane.local.
+202     IN      PTR     OB-LDAP.outmane.local.
