@@ -1,0 +1,17 @@
+;
+; BIND data file for 0.168.192.in-addr.arpa
+;
+$TTL	604800
+@	IN	SOA	SAL-USED.sonia.local.  root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@		IN	NS	SAL-USED.sonia.local.
+;Resgistros pointer
+119             IN      PTR     sonia.local.
+119		IN	PTR 	SAL-USED.sonia.local.
+219		IN	PTR 	SAL-LDAP.sonia.local.
+
