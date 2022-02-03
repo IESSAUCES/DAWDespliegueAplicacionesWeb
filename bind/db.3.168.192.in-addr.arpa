@@ -1,0 +1,15 @@
+;
+; BIND data file for alberto.local
+;
+$TTL	604800
+@	IN	SOA	AFR-USED.alberto.local. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	AFR-USED.alberto.local.
+;Registros pointer
+107		IN	PTR	alberto.local.
+107		IN	PTR	AFR-USED.alberto.local.
