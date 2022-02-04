@@ -5,7 +5,7 @@
 ###
 ######################
 #  Usuarios zipi de la unidad organizativa usuarios
-dn: uid=zipi,ou=usuarios,dc=serverus,dc=local
+dn: uid=zipi,ou=usuarios,dc=oscar,dc=local
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -13,11 +13,11 @@ objectClass: top
 uid: zipi
 sn: zapatilla
 cn: zipi
-mail: zipi@serverus.local
+mail: zipi@oscar.local
 userPassword: paso
 
 # Usuarios zape de la unidad organizativa usuarios
-dn: uid=zape,ou=usuarios,dc=serverus,dc=local
+dn: uid=zape,ou=usuarios,dc=oscar,dc=local
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person

@@ -1,0 +1,6 @@
+dn: uid=zipi,ou=usuarios,dc=oscar,dc=local
+add: mobile
+mobile: 600600600
+
+dn: uid=zipi,ou=usuarios,dc=oscar,dc=local
+delete:mail
