@@ -1,0 +1,12 @@
+# Modificaciones a los usuario creados.
+dn: uid=zipi,ou=usuarios,dc=sasha,dc=local
+add: mobile
+mobile: 123456789
+
+dn: uid=zipi,ou=usuarios,dc=sasha,dc=local
+delete: mail
+
+dn: uid=zape,ou=usuarios,dc=sasha,dc=local
+changetype: modify
+replace: mail
+mail: gemelo2@severus.local
