@@ -2,17 +2,18 @@
 ; BIND data file for alberto.local
 ;
 $TTL	604800
-@	IN	SOA	AFR-USED.alberto.local. root.localhost. (
+@	IN	SOA	AFR-LDAP.alberto.local. root.localhost. (
 			      1		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-@	IN	NS	AFR-USED.alberto.local.
+@	IN	NS	AFR-LDAP.alberto.local.
 ;Registros Host
-@		IN	A	192.168.3.107
+@		IN	A	192.168.3.207
 AFR-USED	IN	A	192.168.3.107
+AFR-LDAP	IN	A	192.168.3.207
 
 ;Registros Alias
 daw201		IN CNAME AFR-USED.alberto.local. 
