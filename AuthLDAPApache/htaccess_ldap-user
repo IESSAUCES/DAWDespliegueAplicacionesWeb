@@ -1,8 +1,11 @@
 AuthType Basic
 AuthBasicProvider ldap
 AuthName "login...."
-AuthLDAPURL "ldap://192.168.0.119/dc=serverus,dc=local?uid?sub?(objectClass=*)"
-AuthLDAPBindDN "cn=admin,dc=serverus,dc=local"
-AuthLDAPBindPassword paso
-Require ldap-user zipi
 
+AuthLDAPURL "ldap://192.168.3.214/dc=oscar,dc=local?uid?sub?(objectClass=*)"
+
+AuthLDAPBindDN "cn=admin,dc=oscar,dc=local"
+
+AuthLDAPBindPassword paso
+
+Require ldap-user zipi
