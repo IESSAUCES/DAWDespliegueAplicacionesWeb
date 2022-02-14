@@ -1,0 +1,4 @@
+#añadir movil al usuario zipi
+dn: uid=zipi,ou=usuarios,dc=aroa,dc=local
+add:mobile
+mobile:980667438 

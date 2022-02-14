@@ -3,9 +3,9 @@
 ####    ALTA GRUPO DE NOMBRES UNICOS
 ####
 #######################################################
-dn: cn=jefes,ou=grupos,dc=serverus,dc=local
+dn: cn=gemelos,ou=grupos,dc=aroa,dc=local
 objectClass: groupOfUniqueNames
 objectClass: top
-cn:jefes
-uniqueMember: uid=zipi,ou=usuarios,dc=serverus,dc=local
-uniqueMember: uid=zape,ou=usuarios,dc=serverus,dc=local
+cn:gemelos
+uniqueMember: uid=zipi,ou=usuarios,dc=aroa,dc=local
+uniqueMember: uid=zape,ou=usuarios,dc=aroa,dc=local
