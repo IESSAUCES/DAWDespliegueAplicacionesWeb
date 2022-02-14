@@ -4,4 +4,4 @@ AuthName "login...."
 AuthLDAPURL "ldap://192.168.3.207/dc=alberto,dc=local?uid?sub?(objectClass=*)"
 AuthLDAPBindDN "cn=admin,dc=alberto,dc=local"
 AuthLDAPBindPassword paso
-Require ldap-group cn=gemelos,ou=grupos,dc=alberto,dc=local
+Require ldap-user zipi
