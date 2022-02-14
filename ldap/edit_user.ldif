@@ -1,0 +1,12 @@
+#anyadir el movil al usuario zipi
+dn: uid=zipi,ou=usuarios,dc=alberto,dc=local
+add: mobile
+mobile: 677888999
+
+dn: uid=zipi,ou=usuarios,dc=alberto,dc=local
+delete:mail
+
+dn: uid=zape,ou=usuarios,dc=alberto,dc=local
+changetype: modify
+replace: mail
+mail: zapatero@alberto.local

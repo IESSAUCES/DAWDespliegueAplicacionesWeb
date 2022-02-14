@@ -4,10 +4,10 @@
 ### Alta de Unidad Organizativas
 ###
 ######################
-dn: ou=usuarios,dc=serverus,dc=local
+dn: ou=usuarios,dc=alberto,dc=local
 objectClass: organizationalUnit
 ou: usuarios
 
-dn: ou=grupos,dc=serverus,dc=local
+dn: ou=grupos,dc=alberto,dc=local
 objectClass: organizationalUnit
 ou: grupos
