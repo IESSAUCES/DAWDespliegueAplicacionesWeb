@@ -1,0 +1,9 @@
+#añadir el movil
+dn: uid=zipi,ou=usuarios,dc=outmane,dc=local
+add:mobile
+Mobile: 666666666
+
+dn: uid=zipi,ou=usuarios,dc=outmane,dc=local
+delete:mail
+
+
